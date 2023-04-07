@@ -1,4 +1,4 @@
 return {
-  "github/copilot.vim",
+  "folke/trouble.nvim",
   lazy = false,
 }
