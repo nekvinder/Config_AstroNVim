@@ -3,6 +3,7 @@
 -- Please use this mappings table to set keyboard mapping since this is the
 -- lower level configuration and more robust one. (which-key will
 -- automatically pick-up stored data by this setting.)
+local utils = require "astronvim.utils"
 return {
   -- first key is the mode
   n = {
@@ -21,6 +22,7 @@ return {
     -- tables with the `name` key will be registered with which-key if it's installed
     -- this is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },
+    ["<C-g>"] = { function() utils.toggle_term_cmd "lazygit" end, desc = "ToggleTerm lazygit" },
     ["U"] = { ":redo<cr>", desc = "Redo" },
     ["f"] = { "<cmd>Pounce<cr>", desc = "Pounce" },
   },
